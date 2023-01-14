@@ -18,6 +18,13 @@ public class DifferentialEvolution {
     public int xu = 20;
     double order;
     double[] coef;
+
+    public DifferentialEvolution(){
+        this.v= new double[size];
+        this.x= new double[size];
+        this.u= new double[size];
+        this.coef= new double[]{1, 3, 1, 6};
+    }
     public double fun(double param){
         double res=0;
         for (int i = 0; i < coef.length; i++) {
@@ -69,7 +76,7 @@ public class DifferentialEvolution {
         }
     }
 
-    public void solve() {
+    public double[] solve() {
 //        double[] res = new double[2];
 //        res[1] = x[0];
 //        res[0] = fun(x[0]);
@@ -86,5 +93,30 @@ public class DifferentialEvolution {
         }
         System.out.print("Solutii: ");
         Arrays.stream(x).distinct().forEach(x -> System.out.printf("\n%.2f", x));
+        return Arrays.stream(x).distinct().toArray();
+    }
+
+    public double[] run(int order, double ...coef){
+        try{
+            //DE.init(6, 1, -8, -45, 360, 324, -2592);
+            this.init(order, coef);
+            for (int i = 0; i < this.max_generations-1; i++) {
+  //              System.out.println();
+    //            for (int j = 0; j < this.size; j++) {
+      //              System.out.printf("%.1f ", this.x[j]);
+        //        }
+                this.nG = new double[this.size];
+                this.mutate();
+                this.cross_bin();
+                this.selection();
+            }
+//            for (int i = 0; i < DE.size; i++) {
+//                System.out.printf("%.1f ", DE.x[i]);
+//            }
+            return this.solve();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
