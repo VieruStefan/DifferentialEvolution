@@ -23,7 +23,7 @@ public class DifferentialEvolution {
         this.v= new double[size];
         this.x= new double[size];
         this.u= new double[size];
-        this.coef= new double[]{1, 3, 1, 6};
+        this.coef= new double[]{1, 3, 4, 6};
     }
     public double fun(double param){
         double res=0;

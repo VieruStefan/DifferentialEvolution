@@ -31,6 +31,11 @@ public void after() throws Exception {
 * Method: fun(double param) 
 * 
 */
+@Test
+public void testFun() throws Exception {
+    DE=new DifferentialEvolution();
+    assertFalse(Arrays.equals(new double[]{0}, new double[]{DE.fun(2)}));
+}
 
 
 /** 
@@ -56,7 +61,7 @@ public void testInitGood() throws Exception {
 * testam daca s-a modificat v intre 2 mutatii pentru testMutateV, iar la testMutate este verificat daca a fost schimbat size
 */ 
 @Test
-public void testMutate() throws Exception {
+public void testMutateSize() throws Exception {
     Assert.assertEquals(80, DE.size);
 }
 @Test
@@ -67,7 +72,7 @@ public void testMutateV() throws Exception {
     DE.mutate();
     assertFalse(Arrays.equals(v, DE.v));
 }
-    /**
+/**
 * 
 * Method: cross_bin() 
 *  testam daca s-a modificat u intre 2 incrucisari
@@ -79,27 +84,20 @@ public void testCross_binU() throws Exception {
     double []u= DE.u;
     DE.cross_bin();
     assertFalse(Arrays.equals(u, DE.u));
-} 
+}
 
-/** 
-* 
-* Method: selection() 
-* 
-*/ 
+/**
+*
+* Method: solve()
+*
+*/
 @Test
-public void testSelection() throws Exception {
+public void testSolve() throws Exception {
+    double []x= DE.x;
 
-} 
-
-/** 
-* 
-* Method: solve() 
-* 
-*/ 
-@Test
-public void testSolve() throws Exception { 
-//TODO: Test goes here... 
-} 
+    assertFalse(Arrays.equals(Arrays.stream(x).sorted().toArray(),
+            Arrays.stream(DE.solve()).sorted().toArray()));
+}
 
 /** 
 * 
@@ -108,10 +106,20 @@ public void testSolve() throws Exception {
 */ 
 @Test
 public void testRun1() throws Exception {
-    DE.run(6, 1, -8, -45, 360, 324, -2592);
     assertTrue(Arrays.equals(new double[]{-6,-3,3,6,8},
             Arrays.stream(Arrays.stream(DE.run(6, 1, -8, -45, 360, 324, -2592)).toArray()).sorted().toArray()));
-} 
+}
 
+@Test
+public void testRun2() throws Exception {
+    assertTrue(Arrays.equals(new double[]{-2,3},
+                Arrays.stream(Arrays.stream(DE.run(3, 1, -1, -6)).toArray()).sorted().toArray()));
+}
+
+@Test
+public void testRun3() throws Exception {
+    assertTrue(Arrays.equals(new double[]{-5 , -1 , 6 , 7},
+            Arrays.stream(Arrays.stream(DE.run(5, 1, -7, -31, 187, 210)).toArray()).sorted().toArray()));
+}
 
 } 

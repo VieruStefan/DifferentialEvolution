@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f4ea36b-ca08-4467-bbc5-a96fe207a488" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="7f4ea36b-ca08-4467-bbc5-a96fe207a488" name="Changes" comment="teste ep">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DifferentialEvolution.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DifferentialEvolution.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DifferentialEvolution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DifferentialEvolution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/java/DifferentialEvolutionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/java/DifferentialEvolutionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,26 +82,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DifferentialEvolutionTest.testInit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DifferentialEvolution" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DifferentialEvolutionTest" />
-      <option name="METHOD_NAME" value="testInit" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DifferentialEvolutionTest.testMutate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DifferentialEvolution" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DifferentialEvolutionTest" />
-      <option name="METHOD_NAME" value="testMutate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DifferentialEvolutionTest.testRun" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DifferentialEvolution" />
       <option name="PACKAGE_NAME" value="" />
@@ -114,13 +92,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DifferentialEvolutionTest.testRun2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DifferentialEvolution" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DifferentialEvolutionTest" />
+      <option name="METHOD_NAME" value="testRun2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DifferentialEvolutionTest.testSolve" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DifferentialEvolution" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DifferentialEvolutionTest" />
+      <option name="METHOD_NAME" value="testSolve" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DifferentialEvolutionTest" />
-        <item itemvalue="JUnit.DifferentialEvolutionTest.testRun" />
+        <item itemvalue="JUnit.DifferentialEvolutionTest.testSolve" />
+        <item itemvalue="JUnit.DifferentialEvolutionTest.testRun2" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.DifferentialEvolutionTest.testMutate" />
-        <item itemvalue="JUnit.DifferentialEvolutionTest.testInit" />
+        <item itemvalue="JUnit.DifferentialEvolutionTest.testRun" />
       </list>
     </recent_temporary>
   </component>
@@ -135,6 +133,14 @@
       <workItem from="1672236928706" duration="7145000" />
       <workItem from="1672304506749" duration="6503000" />
     </task>
+    <task id="LOCAL-00001" summary="teste ep">
+      <created>1673698171985</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673698171985</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,5 +168,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="teste ep" />
+    <option name="LAST_COMMIT_MESSAGE" value="teste ep" />
   </component>
 </project>
